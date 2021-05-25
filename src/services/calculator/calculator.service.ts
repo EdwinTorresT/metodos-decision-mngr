@@ -60,13 +60,13 @@ export default class CalculatorService {
             const calculateBenefictsMatrix: any[] = [];
             const organizatedMatrix: any[] = [];
             const valueExpected: any[] = [];
-            matrix.forEach((elementRow, row) => {
+            for (let col = 0; col < matrix[0].length; col++) {
                 const tempM: any[] = [];
-                matrix.forEach((elementCol, col) => {
-                    tempM.push(matrix[col][row]);
-                });
+                for (let row = 0; row < matrix.length; row++) {
+                    tempM.push(matrix[row][col]);
+                }
                 benefictsMatrix.push(tempM);
-            });
+            }
             benefictsMatrix.forEach((item: any) => {
                 let max = 0;
                 const tempV: any[] = [];
