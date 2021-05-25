@@ -1,8 +1,9 @@
 import * as http from 'http';
 import app from './app';
+import config from './config';
 
 // Variables
-const port = 8090;
+const port = config.port;
 
 // Declare port to app
 app.set('port', port);
